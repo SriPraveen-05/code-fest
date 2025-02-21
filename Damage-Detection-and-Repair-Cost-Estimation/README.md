@@ -1,4 +1,4 @@
-# 🚗 Car Damage Detection and Repair Cost Estimation
+# Damage Detection and Repair Cost Estimation
 
 ## Overview  
 This project leverages **Mask R-CNN** and **Deep Learning** techniques to automate car damage detection and repair cost estimation. Designed for applications in the **automotive industry** (e.g., insurance providers, repair shops), this solution streamlines the claims process, minimizes human error, and enhances customer satisfaction.  
