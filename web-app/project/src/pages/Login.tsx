@@ -88,14 +88,15 @@ const Login = () => {
                 Don't have an account? Sign up
               </Link>
             </div>
-            <div className="text-sm">
+            <Button><div className="text-sm">
               <a
                 href="#"
-                className="font-medium text-blue-600 hover:text-blue-500"
+                onClick={() => navigate('/ForgotPass')}
+                className="text-sm"
               >
                 Forgot password?
               </a>
-            </div>
+            </div></Button>
           </div>
         </form>
       </div>

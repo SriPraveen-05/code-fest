@@ -1,10 +1,12 @@
-import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Car, User, LogOut } from 'lucide-react';
 import { Button } from './ui/button';
+import { useNavigate } from 'react-router-dom';
+
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const location = useLocation();
   const isAuthenticated = location.pathname !== '/login' && location.pathname !== '/signup';
 
@@ -25,11 +27,11 @@ const Navbar = () => {
 
           {isAuthenticated && (
             <div className="flex items-center space-x-4">
-              <Button variant="ghost" className="flex items-center space-x-2">
+              <Button onClick={() => navigate('/profile')} variant="ghost" className="flex items-center space-x-2">
                 <User className="h-5 w-5" />
                 <span className="hidden sm:inline">Profile</span>
               </Button>
-              <Button variant="outline" className="flex items-center space-x-2">
+              <Button onClick={() => navigate('/login')} variant="outline" className="flex items-center space-x-2">
                 <LogOut className="h-5 w-5" />
                 <span className="hidden sm:inline">Logout</span>
               </Button>
